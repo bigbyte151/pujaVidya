@@ -4,7 +4,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <header className="relative bg-cover bg-center h-screen">
+    <header className="relative bg-cover bg-center h-screen w-screen overflow-hidden">
       <style jsx>{`
         @keyframes zoomIn {
           0% {
