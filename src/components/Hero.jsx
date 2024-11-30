@@ -57,6 +57,19 @@ const Hero = () => {
         .vertical-slider {
           animation: verticalScroll 20s linear infinite;
         }
+
+        @keyframes horizontalScroll {
+          0% {
+            transform: translateX(0%);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+
+        .horizontal-slider {
+          animation: horizontalScroll 20s linear infinite;
+        }
       `}</style>
 
       {/* Background Image with Animation */}
@@ -76,21 +89,22 @@ const Hero = () => {
 
       {/* Hero Content */}
       <div
-        className="relative z-10 flex flex-col items-left justify-center h-full text-white px-24 transition-opacity duration-500"
+        className="relative z-10 flex flex-col items-start justify-center h-full px-6 sm:px-12 md:px-24 text-white transition-opacity duration-500"
         style={{ opacity: scrollOpacity }}
       >
-        <h1 className="text-4xl font-bold mb-4 md:text-6xl">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4">
           Welcome to Puja Services
         </h1>
-        <p className="text-base md:text-lg">
+        <p className="text-sm sm:text-base md:text-lg">
           Experience divine rituals at your convenience
         </p>
       </div>
 
-      {/* Vertical Scrolling Image Slider */}
-      <div className="absolute gap-4 top-0 right-12 h-full w-96 opacity-80 overflow-hidden">
+      {/* Image Slider */}
+      <div className="absolute bottom-4 sm:top-0 sm:right-4 sm:w-80 md:right-12 h-32 sm:h-full w-full overflow-hidden">
+        {/* Vertical Slider for Medium and Larger Screens */}
         <div
-          className="flex flex-col h-full vertical-slider"
+          className="hidden sm:flex flex-col h-full vertical-slider"
           style={{
             willChange: "transform",
           }}
@@ -110,7 +124,37 @@ const Hero = () => {
             .map((src, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 h-56 w-full bg-cover my-5 py-5 border bg-center"
+                className="flex-shrink-0 h-40 sm:h-48 md:h-56 w-full bg-cover my-3 md:my-5 py-3 md:py-5 border bg-center"
+                style={{
+                  backgroundImage: `url('${src}')`,
+                }}
+              ></div>
+            ))}
+        </div>
+
+        {/* Horizontal Slider for Mobile Screens */}
+        <div
+          className="flex sm:hidden h-full w-full horizontal-slider"
+          style={{
+            willChange: "transform",
+          }}
+        >
+          {[
+            "preist.png",
+            "pujabook.png",
+            "preist.png",
+            "pujabook.png",
+          ]
+            .concat([
+              "preist.png",
+              "pujabook.png",
+              "preist.png",
+              "pujabook.png",
+            ]) // Duplicate the array to create a seamless loop
+            .map((src, index) => (
+              <div
+                key={index}
+                className="flex-shrink-0 h-40 w-60 bg-cover mx-2 border bg-center"
                 style={{
                   backgroundImage: `url('${src}')`,
                 }}
