@@ -140,7 +140,7 @@ const Hero = () => {
             .map((src, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 h-40 sm:h-48 md:h-56 w-full bg-cover my-3 md:my-5 py-3 md:py-5  bg-center"
+                className="flex-shrink-0 h-40 sm:h-48 md:h-56 w-full bg-cover my-3 md:my-5 py-3 md:py-5 rounded-3xl bg-center"
                 style={{
                   backgroundImage: `url('${src}')`,
                 }}
