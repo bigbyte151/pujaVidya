@@ -110,16 +110,32 @@ const Hero = () => {
           }}
         >
           {[
-            "pic1.jpeg",
-            "pujabook.png",
-            "preist.png",
-            "pujabook.png",
+             "pics/1.jpg",
+             
+             "pics/3.jpg",
+             "pics/4.jpg",
+             "pics/5.jpg",
+             "pics/6.jpg",
+             "pics/7.jpg",
+             "pics/8.jpg",
+             "pics/9.jpg",
+             "pics/10.jpg",
+             "pics/11.jpg",
+             "pics/12.jpg",
           ]
             .concat([
-              "preist.png",
-              "pujabook.png",
-              "preist.png",
-              "pujabook.png",
+              "pics/1.jpg",
+            
+            "pics/3.jpg",
+            "pics/4.jpg",
+            "pics/5.jpg",
+            "pics/6.jpg",
+            "pics/7.jpg",
+            "pics/8.jpg",
+            "pics/9.jpg",
+            "pics/10.jpg",
+            "pics/11.jpg",
+            "pics/12.jpg",
             ]) // Duplicate the array to create a seamless loop
             .map((src, index) => (
               <div
@@ -140,16 +156,47 @@ const Hero = () => {
           }}
         >
           {[
-            "pic1.jpeg",
-            "pujabook.png",
-            "preist.png",
-            "pujabook.png",
+            "pics/1.jpg",
+            
+            "pics/3.jpg",
+            "pics/4.jpg",
+            "pics/5.jpg",
+            "pics/6.jpg",
+            "pics/7.jpg",
+            "pics/8.jpg",
+            "pics/9.jpg",
+            "pics/10.jpg",
+            "pics/11.jpg",
+            "pics/12.jpg",
+            "pics/1.jpg",
+            
+            "pics/3.jpg",
+            "pics/4.jpg",
+            "pics/5.jpg",
+            "pics/6.jpg",
+            "pics/7.jpg",
+            "pics/8.jpg",
+            "pics/9.jpg",
+            "pics/10.jpg",
+            "pics/11.jpg",
+            "pics/12.jpg",
+
+
+            
           ]
             .concat([
-              "preist.png",
-              "pujabook.png",
-              "preist.png",
-              "pujabook.png",
+              "pics/1.jpg",
+            
+            "pics/3.jpg",
+            "pics/4.jpg",
+            "pics/5.jpg",
+            "pics/6.jpg",
+            "pics/7.jpg",
+            "pics/8.jpg",
+            "pics/9.jpg",
+            "pics/10.jpg",
+            "pics/11.jpg",
+            "pics/12.jpg",
             ]) // Duplicate the array to create a seamless loop
             .map((src, index) => (
               <div
