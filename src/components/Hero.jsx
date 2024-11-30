@@ -110,7 +110,7 @@ const Hero = () => {
           }}
         >
           {[
-            "preist.png",
+            "pic1.jpeg",
             "pujabook.png",
             "preist.png",
             "pujabook.png",
@@ -140,7 +140,7 @@ const Hero = () => {
           }}
         >
           {[
-            "preist.png",
+            "pic1.jpeg",
             "pujabook.png",
             "preist.png",
             "pujabook.png",
@@ -154,7 +154,7 @@ const Hero = () => {
             .map((src, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 h-40 w-60 bg-cover mx-2  bg-center"
+                className="flex-shrink-0 h-{100vh} w-60 bg-cover mx-2  bg-center"
                 style={{
                   backgroundImage: `url('${src}')`,
                 }}
