@@ -23,7 +23,7 @@ const Header = () => {
       className={`fixed top-0 left-0 w-full flex items-center justify-between px-4 md:px-8 py-4 z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-black/80 backdrop-blur-md border-b border-gray-700"
-          : "bg-transparent"
+          : "bg-transparent border-b border-transparent"
       }`}
     >
       {/* Logo Section */}
@@ -73,11 +73,11 @@ const Header = () => {
 
       {/* Navigation Links */}
       <ul
-        className={`flex-col md:flex-row md:flex items-center space-y-4 md:space-y-0 md:space-x-6 absolute md:static top-11 gap-4 right-0 w-[80%] md:w-auto bg-black md:bg-transparent px-4 py-2 md:p-0 overflow-hidden transition-all duration-300 ease-in-out ${
-          menuOpen ? "h-screen opacity-100" : "max-h-0 opacity-0"
-        }`}
+        className={`absolute md:static top-11 right-0 w-[80%] md:w-auto bg-black md:bg-transparent px-4 py-2 md:p-0 overflow-hidden transition-all duration-600 ease-in-out ${
+          menuOpen ? "block opacity-100 h-auto" : "hidden"
+        } md:flex md:opacity-100 md:h-auto md:block space-y-4 md:space-y-0 md:space-x-6`}
       >
-        {[ 
+        {[
           "HOME",
           "ABOUT US",
           "SERVICES",
@@ -90,11 +90,9 @@ const Header = () => {
         ].map((item) => (
           <li
             key={item}
-            className="text-white uppercase text-sm font-medium cursor-pointer hover:text-pink-500 transition relative"
+            className="text-white uppercase text-sm font-medium cursor-pointer relative pb-1 transition-all duration-300 hover:border-b-2 hover:border-yellow-500 hover:text-yellow-500"
           >
-            <span className="pb-1 border-b-2 border-transparent hover:border-pink-500 transition">
-              {item}
-            </span>
+            {item}
           </li>
         ))}
       </ul>

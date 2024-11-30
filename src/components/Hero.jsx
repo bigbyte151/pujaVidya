@@ -4,7 +4,8 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <header className="relative bg-cover bg-center h-screen w-screen overflow-hidden">
+    <header className="relative h-screen w-screen overflow-hidden bg-cover bg-center">
+      {/* Animation styles */}
       <style jsx>{`
         @keyframes zoomIn {
           0% {
@@ -22,6 +23,7 @@ const Hero = () => {
 
       {/* Background Image with Animation */}
       <div
+        aria-hidden="true"
         className="absolute inset-0 animated-background"
         style={{
           backgroundImage: `url('Untitled-5-copy.jpg')`,
@@ -34,9 +36,13 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black/60"></div>
 
       {/* Hero Content */}
-      <div className="relative z-10 flex flex-col justify-center items-center h-full text-center text-white">
-        <h1 className="text-5xl font-bold mb-4">Welcome to Puja Services</h1>
-        <p className="text-lg">Experience divine rituals at your convenience</p>
+      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
+        <h1 className="text-4xl font-bold mb-4 md:text-6xl">
+          Welcome to Puja Services
+        </h1>
+        <p className="text-base md:text-lg">
+          Experience divine rituals at your convenience
+        </p>
       </div>
     </header>
   );

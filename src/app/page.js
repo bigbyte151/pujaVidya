@@ -1,4 +1,4 @@
-import { Footer, Header, Hero } from '@/components'
+import { FocusCard, Footer, Header, Hero } from '@/components'
 import React from 'react'
 
 function page() {
@@ -6,6 +6,7 @@ function page() {
     <div>
     
       <Hero/>
+      <FocusCard/>
     
     </div>
   )
